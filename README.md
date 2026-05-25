@@ -42,13 +42,13 @@ The dataset contains **25,480 visa applications** across **12 columns**. The tar
 
 ## Approach
 
-1. **Data understanding.** Reviewed the shape, data types, and summary statistics across the 25,480 applications and 12 columns.
-2. **Exploratory data analysis.** Studied univariate distributions and bivariate relationships between applicant and employer features and the case status.
-3. **Data preparation.** Engineered and encoded categorical features and split the data into training, validation, and test sets.
-4. **Class balancing.** Addressed the imbalance in the target using both oversampling with SMOTE and random undersampling, then compared their effect on model performance.
-5. **Modelling.** Trained and compared a Decision Tree alongside ensemble methods including Bagging, Random Forest, AdaBoost, Gradient Boosting, and XGBoost.
-6. **Hyperparameter tuning.** Tuned the strongest candidates using Grid Search and Randomized Search to reduce overfitting and improve generalization.
-7. **Evaluation and recommendations.** Compared models on accuracy, precision, recall, and F1 score, selected the final model, and translated the findings into business recommendations.
+1. **Data understanding:** Reviewed the shape, data types, and summary statistics across the 25,480 applications and 12 columns.
+2. **Exploratory data analysis:** Studied univariate distributions and bivariate relationships between applicant and employer features and the case status.
+3. **Data preparation:** Engineered and encoded categorical features and split the data into training, validation, and test sets.
+4. **Class balancing:** Addressed the imbalance in the target using both oversampling with SMOTE and random undersampling, then compared their effect on model performance.
+5. **Modelling:** Trained and compared a Decision Tree alongside ensemble methods including Bagging, Random Forest, AdaBoost, Gradient Boosting, and XGBoost.
+6. **Hyperparameter tuning:** Tuned the strongest candidates using Grid Search and Randomized Search to reduce overfitting and improve generalization.
+7. **Evaluation and recommendations:** Compared models on accuracy, precision, recall, and F1 score, selected the final model, and translated the findings into business recommendations.
 
 ## Models Used
 
@@ -75,39 +75,6 @@ Each model was trained on the original data, on oversampled data, and on undersa
 - Prefer oversampling over undersampling, since it improved performance while retaining useful information.
 - Use the model as an early screening and decision support tool. Fast track applications with a high probability of certification, and flag lower probability cases for additional document review or applicant guidance.
 - Focus consultant attention on the key drivers, including education level, prior job experience, prevailing wage, wage unit, full time position status, and region of employment.
-
-## Repository Structure
-
-```
-easyvisa-approval-prediction/
-├── README.md
-├── requirements.txt
-├── .gitignore
-├── data/
-│   └── EasyVisa.csv                     # not committed (see .gitignore)
-├── notebooks/
-│   └── easyvisa_approval_prediction.ipynb
-└── reports/
-    └── easyvisa_approval_prediction.html  # exported notebook
-```
-
-## Getting Started
-
-```bash
-# clone
-git clone https://github.com/<your-username>/easyvisa-approval-prediction.git
-cd easyvisa-approval-prediction
-
-# (optional) create a virtual environment
-python -m venv .venv
-source .venv/bin/activate        # Windows: .venv\Scripts\activate
-
-# install dependencies
-pip install -r requirements.txt
-
-# launch the notebook
-jupyter notebook notebooks/easyvisa_approval_prediction.ipynb
-```
 
 ## Tech Stack
 
